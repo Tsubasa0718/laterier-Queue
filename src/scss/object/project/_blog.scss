@@ -1,0 +1,88 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-blog{
+    padding: px-clamp(80,100,375,1600) 0;
+    &__title{
+        position: relative;
+        &::before{
+            display: block;
+            content: "";
+            position: absolute;
+            top: px-to-rem(-30px);
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../images/ico_paw--blog.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: px-to-rem(45px);
+            height: px-to-rem(32px);
+        }
+    }
+    &__card-body{
+        margin-top: px-clamp(30,50,375,1600);
+    }
+    &__card-item{
+      padding: px-clamp(15,30,375,1600) 0;
+      border-top: 1px dashed var(--active-color);
+      border-bottom: 1px dashed var(--active-color);
+    }
+    &__card-item:not(:first-of-type){
+      border-bottom: 1px dashed var(--active-color);
+    }
+    &__card-article{
+        display: flex;
+    }
+    &__card-desc{
+        margin-left: px-to-rem(20px);
+        width: 70%;
+    }
+    &__card-thumb{
+        width: 30%;
+    }
+    &__card-note{
+        margin-bottom: px-to-rem(5px);
+    }
+    &__card-label--primary,
+    &__card-label--default{
+      display: inline-block;
+      margin-left: px-to-rem(25px);
+      font-size: px-to-rem(14px);
+      padding: px-to-rem(5px) px-to-rem(15px);
+      text-align: center;
+    }
+    &__card-label--primary{
+        background-color: var(--primary-color);
+        color: var(--base-color);
+    }
+    &__card-label--default{
+        background-color: var(--accent-color);
+    }
+    &__card-title{
+        font-size: px-clamp(16,30,375,1600);
+        font-weight: bold;
+    }
+    &__card-link{
+      line-height: px-to-rem(28px);
+      transition: .3s;
+      &:hover{
+        text-decoration: underline 1px solid var(--main-color);
+      }
+    }
+    &__card-text{
+        display: none;
+        @include responsive("phone"){
+            margin-top: px-to-rem(10px);
+            display: block;
+            line-height: px-to-rem(28px);
+        }
+    }
+    &__card-btn{
+        display: none;
+        @include responsive("phone"){
+            display: block;
+            margin-top: px-to-rem(15px);
+            text-align: right;
+        }
+    }
+}

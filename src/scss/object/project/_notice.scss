@@ -1,0 +1,82 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-notice{
+   padding: px-to-rem(110px) 0 px-clamp(40,50,375,1600) 0;
+
+   &__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after{
+      content: "";
+      display: block;
+      width: 95%; // 親要素の幅いっぱいの線を引く
+      height: 2px; // 線の太さ
+      background-color: #c4a95e; // アンダーラインの色
+      position: absolute;
+      bottom: 0; // 一番下に配置
+      left: px-clamp(21,30,375,1600);
+      @include responsive("tablet"){
+        width: 98%;
+      }
+    }
+  }
+
+  &__list-body{
+     margin-top: px-clamp(20,40,375,1600);
+   }
+   &__item{
+    padding: px-clamp(15,20,375,1600) 0;
+    border-top: 1px dashed var(--active-color);
+    border-bottom: 1px dashed var(--active-color);
+    @include responsive("tablet"){
+    display: flex;
+    align-items: center;
+    }
+   }
+   &__item:not(:first-of-type){
+    border-bottom: 1px dashed var(--active-color);
+   }
+   &__data-info{
+    display: flex;
+    flex-direction: column;
+    @include responsive("tablet"){
+      flex-direction: row;
+      margin-right: px-to-rem(15px);
+    }
+   }
+   &__time{
+    font-size:  px-clamp(12,16,375,1600);
+    @include responsive("tablet"){
+      margin-right: 1.5rem;
+    }
+   }
+   &__label{
+    display: inline-block;
+    margin: px-to-rem(5px) 0;
+    width: px-to-rem(92px);
+    white-space: nowrap;
+    font-size: px-to-rem(12px);
+    background-color: var(--primary-color);
+    color: var(--base-color);
+    padding: 0 1rem;
+   }
+   &__label--default{
+    display: inline-block;
+    margin: px-to-rem(5px) 0;
+    white-space: nowrap;
+    width: px-to-rem(92px);
+    padding: 0 1rem;
+    font-size: px-to-rem(12px);
+    background-color: var(--accent-color);
+   }
+
+  &__topic-link{
+    transition: .3s;
+    &:hover{
+      color: var(--active-color);
+      border-bottom: 1px solid var(--active-color);
+    }
+  }
+}

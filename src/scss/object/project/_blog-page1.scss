@@ -1,0 +1,227 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-blog-page1{
+    padding: px-clamp(46,73,375,1600) 0 px-clamp(80,100,375,1600) 0;
+    // 記事1
+    &__article01-title{
+     font-size: px-clamp(26,36,375,1600);
+     font-weight: bold;
+     line-height: 1.5;
+     border-bottom: dashed 1px var(--main-color);
+    }
+    &__article01-image{
+      margin-top: px-clamp(30,40,375,1600);
+    }
+    &__article01-text{
+        margin-top: px-clamp(30,40,375,1600);
+        line-height: 1.75;
+    }
+
+    // 記事2
+    &__article02{
+      margin-top: px-clamp(72,90,375,1600);
+    }
+    &__article02-title{
+        font-size: px-clamp(24,30,375,1600);
+        font-weight: bold;
+        line-height: 1.5;
+        border-bottom: solid 2px var(--active-color);
+    }
+    &__article02-text{
+        margin-top: px-clamp(20,40,375,1600);
+        line-height: 1.75;
+    }
+
+    // 記事3
+    &__article03{
+      padding:px-clamp(80,100,375,1600) 0 px-clamp(25,40,375,1600) 0;
+    }
+    &__article03-title{
+        font-size: px-clamp(24,30,375,1600);
+        font-weight: bold;
+        line-height: 1.5;
+    }
+    &__article03-text{
+        margin-top:px-clamp(22,40,375,1600);
+        line-height: 1.5;
+    }
+
+    // 記事4
+    &__article04{
+        padding:px-clamp(40,50,375,1600) 0 px-clamp(20,30,375,1600) 0;
+    }
+    &__article04-title{
+        font-size:px-clamp(20,24,375,1600);
+        font-weight: bold;
+        line-height: 1.5;
+    }
+    &__article04-text{
+        margin-top:px-clamp(18,24,375,1600);
+        line-height: 1.75;
+    }
+
+    // 記事5
+    &__article05{
+     padding: px-clamp(30,40,375,1600) 0 px-clamp(15,20,375,1600) ;
+    }
+    &__article05-title{
+        font-size: px-clamp(18,20,375,1600);
+        font-weight: bold;
+        line-height: 1.5;
+        color: var(--active-color);
+    }
+    &__article05-text{
+        margin-top: px-clamp(15,10,375,1600);
+        line-height: 1.75;
+    }
+
+    // 記事6
+    &__article06{
+        padding: px-to-rem(30px) 0 px-clamp(10,15,375,1600) 0;
+    }
+    &__article06-title{
+       font-size: px-clamp(16,18,375,1600);
+       font-weight: bold;
+       line-height: 1.5;
+    }
+    &__article06-text{
+        margin-top: px-to-rem(10px);
+        line-height: 1.75;
+    }
+
+    // 記事7
+    &__article07{
+        padding: px-to-rem(30px) 0 px-to-rem(10px) 0;
+    }
+    &__article07-title{
+        font-weight: bold;
+        line-height: 1.5;
+        color: var(--article07-color);
+    }
+    &__article07-text{
+        margin-top: px-to-rem(10px);
+        line-height: 1.75;
+    }
+
+ // ラベル：タグ
+    &__note{
+      margin-bottom: px-to-rem(20px);
+
+    }
+    &__time{
+        margin-right: px-to-rem(10px);
+        line-height: 1.5;
+    }
+    &__label{
+        display: inline-block;
+        padding: px-to-rem(5px) 0;
+        text-align: center;
+        width: px-to-rem(92px);
+        font-size: px-to-rem(12px);
+        background-color: var(--accent-color);
+
+    }
+
+    // リスト１
+    &__list1{
+     margin-bottom: px-clamp(20,30,375,1600);
+     display: grid;
+     row-gap: px-to-rem(15px);
+    }
+    &__list1-item{
+     line-height: 1.75;
+     strong::before{
+        content: "・";
+        color: var(--active-color);
+     }
+    }
+    // リスト２
+    &__list2{
+        display: grid;
+        row-gap: px-to-rem(15px);
+    }
+    &__list2-item{
+        line-height: 1.75;
+        &::before{
+            font-weight: bold;
+        }
+        &:nth-child(1){
+            &::before{
+                content: "1.";
+            }
+        }
+        &:nth-child(2){
+            &::before{
+                content: "2.";
+            }
+        }
+     }
+      // ねこの記事
+      &__cat-article-body{
+        padding: px-clamp(30,50,375,1600) 0 px-clamp(70,90,375,1600);
+     }
+     &__cat-article-wrapper{
+        display: grid;
+        row-gap: px-clamp(25,30,375,1600);
+     }
+
+     &__cat-article01,
+     &__cat-article02 {
+         overflow: hidden; // クリアボックス解除
+      }
+
+     &__cat-article01-image img {
+      @include responsive("tablet"){
+       float: left; // 左回り込み
+       max-width: 380px; // 最大幅
+       margin-right: px-to-rem(15px); // テキストとの余白
+     }
+    }
+
+    &__cat-article02-image img {
+      @include responsive("tablet"){
+        float: right; // 左回り込み
+        max-width: 380px; // 最大幅
+        margin-right: px-to-rem(15px); // テキストとの余白
+     }
+   }
+
+     &__cat-article01-image,
+     &__cat-article02-image,
+     &__cat-article03-image{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+     }
+     &__cat-article03-image{
+        @include responsive("tablet"){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: px-to-rem(520px);
+                height: px-to-rem(240px);
+                max-width: 100%; // 念のため画像が親要素を超えないように
+                margin: 0 auto;
+            }
+        }
+     }
+
+     &__cat-article01-text,
+     &__cat-article02-text{
+        margin-top: px-to-rem(17px);
+     @include responsive("tablet"){
+        margin-top: 0;
+     }
+     }
+     &__cat-article01-text,
+     &__cat-article02-text,
+     &__cat-article03-text{
+        line-height: 1.75;
+     }
+     &__cat-article03-text{
+        margin-top: px-clamp(17,20,375,1600);
+     }
+
+}

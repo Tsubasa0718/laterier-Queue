@@ -1,0 +1,31 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    font-family:"Noto Sans JP", "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    color: var(--main-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+  --main-color: #341E12;
+  --base-color: #FFFFFF;
+  --accent-color: #F5EFD7;
+  --primary-color: #F7320E;
+  --active-color: #CEB967;
+  --error-color: #DF5656;
+  --article07-color: #666666;
+  --form-border-color: #707070;
+}

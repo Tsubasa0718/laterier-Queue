@@ -1,0 +1,33 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-profile{
+    padding: px-clamp(40,50,375,1600) 0;
+    &__title{
+        font-size: px-clamp(24,30,375,1600);
+        font-weight: bold;
+        color: var(--main-color);
+        text-align: center;
+    }
+    &__image-body{
+        margin-top: px-to-rem(30px);
+    }
+    &__image{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img{
+        margin: 0 auto;
+      }
+    }
+    &__caption{
+        margin-top: px-to-rem(20px);
+        line-height: px-to-rem(28px);
+        font-weight: bold;
+    }
+    &__text{
+        margin-top: px-to-rem(14px);
+        text-align: center;
+        line-height: px-to-rem(28px);
+    }
+}

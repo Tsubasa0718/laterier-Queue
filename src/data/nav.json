@@ -1,0 +1,8 @@
+[
+    { "name": "トップページ", "link": "index.html" },
+    { "name": "商品一覧", "link": "product.html" },
+    { "name": "ねこブログ", "link": "blog.html" },
+    { "name": "ねこ店員紹介", "link": "shop.html" },
+    { "name": "よくある質問", "link": "faq.html" },
+    { "name": "お問い合わせ", "link": "contact.html" }
+  ]

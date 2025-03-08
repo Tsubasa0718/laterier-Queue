@@ -1,0 +1,27 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-faq{
+    padding: px-clamp(60,75,375,1600) 0 px-clamp(80,100,375,1600) 0;
+    &__title{
+        position: relative;
+        &::before{
+            display: block;
+            content: "";
+            position: absolute;
+            top: px-to-rem(-45px);
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../images/ico_paw--faq.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: px-to-rem(153px);
+            height: px-to-rem(32px);
+        }
+    }
+    &__intro{
+        margin-top: px-to-rem(40px);
+        text-align: center;
+        line-height: 1.75;
+    }
+}

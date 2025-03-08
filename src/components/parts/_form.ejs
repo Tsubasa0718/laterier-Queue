@@ -1,0 +1,59 @@
+<div class="p-form-body">
+    <!-- フォームの開始 -->
+    <form id="js-form" class="p-form" action="#" noValidate>
+        <!-- select ボックス -->
+        <div class="p-form__item">
+            <label for="select" class="p-form__title">お問い合わせ情報<span class="p-form__required">必須</span></label>
+            <div class="p-form__select-block">
+                <div class="p-form__select-wrapper">
+                    <!-- 選択メニュー -->
+                    <select class="p-form__select" name="select" id="select" required aria-describedby="select-error">
+                        <option value="">選択してください</option>
+                        <option value="商品について">商品について</option>
+                        <option value="購入について">購入について</option>
+                        <option value="在庫・入荷について">在庫・入荷について</option>
+                        <option value="その他お問い合わせについて">その他お問い合わせについて</option>
+                    </select>
+                    <!-- エラーメッセージ表示用 -->
+                    <span id="select-error" aria-live="polite"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- テキストエリア -->
+        <div class="p-form__item">
+            <label for="comment" class="p-form__title">お問い合わせ内容<span class="p-form__required">必須</span></label>
+            <div class="p-form__input-body">
+                <textarea class="p-form__textarea" name="comment" id="comment" placeholder="お問い合わせ内容をご記入ください" required aria-describedby="comment-error"></textarea>
+                <!-- エラーメッセージ表示用 -->
+                <span id="comment-error" aria-live="polite"></span>
+            </div>
+        </div>
+
+        <!-- テキスト入力フィールド: 名前 -->
+        <div class="p-form__item">
+            <label for="name" class="p-form__title">お名前<span class="p-form__required">必須</span></label>
+            <div class="p-form__input-body">
+                <input type="text" name="name" id="name" placeholder="猫野三毛蔵" required aria-describedby="name-error">
+                <!-- エラーメッセージ表示用 -->
+                <span id="name-error" aria-live="polite"></span>
+            </div>
+        </div>
+
+        <!-- テキスト入力フィールド: メールアドレス -->
+        <div class="p-form__item">
+            <label for="email" class="p-form__title">返信用メールアドレス<span class="p-form__required">必須</span></label>
+            <div class="p-form__input-body">
+                <input type="email" name="email" id="email" placeholder="mikezou@sample.jp" required aria-describedby="email-error">
+                <!-- エラーメッセージ表示用 -->
+                <span id="email-error" aria-live="polite"></span>
+            </div>
+        </div>
+
+        <!-- 送信ボタン -->
+        <div class="p-form__btn">
+            <button type="submit" class="c-btn--submit">入力内容を確認する</button>
+        </div>
+    </form>
+    <!-- フォームの終了 -->
+</div>

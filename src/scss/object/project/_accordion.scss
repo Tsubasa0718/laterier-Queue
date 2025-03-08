@@ -1,0 +1,83 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-accordion{
+    margin-top: px-clamp(30,75,375,1600);
+   &__item:not(:first-of-type){
+     margin-top: px-to-rem(20px);
+   }
+   //ボタン
+   &__btn{
+    position: relative;
+    padding: px-to-rem(15px) px-to-rem(15px) px-to-rem(15px) px-clamp(45,55,375,1600);
+    font-size: px-clamp(16,18,375,1600);
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--main-color);
+    width: 100%;
+    background-color: var(--accent-color);
+    }
+   //Qアイコン
+    &__question{
+     position: absolute;
+     top: 30%;
+     transform: translateY(-30%);
+     left: px-to-rem(10px);
+     font-size:  px-clamp(30,35,375,1600);
+     font-weight: bold;
+     color: var(--active-color);
+     }
+   //Aアイコン
+   &__answer{
+    position: absolute;
+    top: 70%;
+    transform: translateY(-70%);
+    left: px-to-rem(10px);
+    font-size:  px-clamp(30,35,375,1600);
+    font-weight: bold;
+    color: var(--main-color);
+    }
+    // ＋アイコン
+    &__plus{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: px-to-rem(10px);
+      display: inline-block;
+      vertical-align: middle;
+      color: #333;
+      line-height: 1;
+      width: 1em;
+      height: 0.1em;
+      background: currentColor;
+      border-radius: 0.1em;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        transform: rotate(90deg);
+        transition: .3s;
+      }
+      &.active{
+        &::before{
+          width: 0;
+          height: 0;
+        }
+      }
+     }
+   &__content{
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+    p{
+        padding: px-to-rem(25px) 0 0 px-clamp(45,55,375,1600);
+        line-height: 1.75;
+
+    }
+   }
+}

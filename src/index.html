@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= metaData.default.description %>">
+    <!-- OGP -->
+    <meta property="og:title" content="<%= metaData.default.title %>">
+    <meta property="og:description" content="<%= metaData.default.description %>">
+    <meta property="og:type" content="<%= metaData.default.type %>">
+    <meta property="og:url" content="<%= metaData.default.ogUrl %>">
+    <meta property="og:image" content="<%= metaData.default.ogImage %>">
+    <!-- Google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="/src/scss/style.scss">
+    <title><%= metaData.default.title %></title>
+  </head>
+  <body>
+    <!-- nav aria-lable pc時の非表示 -->
+     <%- include('./components/layout/_header-top',{navItems:navItems}) %>
+     <%- include('./components/sections/_notice.ejs') %>
+     <%- include('./components/sections/_product.ejs') %>
+     <%- include('./components/sections/_category.ejs') %>
+     <%- include('./components/sections/_sales.ejs') %>
+     <%- include('./components/sections/_profile.ejs') %>
+     <%- include('./components/layout/_footer.ejs',{navItems:navItems}) %>
+     <%- include('./components/parts/_side-btn.ejs') %>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+
+{
+  "default": {
+    "title": "laterier Queue ",
+    "description": "ようこそ、laterier Queue （アトリエ・クー）へ！猫好きのための手作りグッズ専門店です。 可愛くておしゃれな猫のアクセサリーやインテリア雑貨を取り揃えています。愛猫との暮らしをより豊かにするアイテムを見つけてみませんか？",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+
+  "product": {
+    "title": "laterier Queue-商品一覧ページ",
+    "description": "laterier Queue （アトリエ・クー）の商品一覧ページです。可愛い猫のアクセサリーやインテリア雑貨、機能的なキャット用品など、豊富な商品ラインナップをご覧いただけます。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+  "blog": {
+    "title": "laterier Queue-ブログページ",
+    "description": "猫に関する最新情報やお役立ち情報をお届けする、laterier Queue （アトリエ・クー）の公式ブログです。猫ちゃんとの生活をより楽しくするための記事が満載です。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+  "shop": {
+    "title": "laterier Queue-ねこ店員紹介ページ",
+    "description": "laterier Queue （アトリエ・クー）の実店舗をご紹介します。店内の雰囲気や取り扱い商品、アクセス情報などをお伝えします。ぜひ、お近くの店舗にお越しください。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+  "faq": {
+    "title": "laterier Queue-よくある質問ページ",
+    "description": "お客様からよく寄せられる質問とその回答をまとめました。laterier Queue （アトリエ・クー）についての疑問があれば、こちらをご覧ください。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+  "contact": {
+    "title": "laterier Queue-ねこ店舗紹介ページ",
+    "description": "laterier Queue （アトリエ・クー）へのお問い合わせはこちらからどうぞ。ご質問やご意見がございましたら、お気軽にご連絡ください。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+  "cart": {
+    "title": "laterier Queue-商品詳細ページ",
+    "description": "【焼印付】爪とぎ型キーホルダーの詳細ページです。愛猫への愛情を込めて作られた手作りのキーホルダー。可愛い爪とぎ型に焼印が入った、唯一無二のアイテムです。日常使いにぴったりのアクセサリーをぜひご覧ください。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+  "privacy": {
+    "title": "laterier Queue-プライバシーポリシー",
+    "description": "laterier Queue （アトリエ・クー）のプライバシーポリシーページです。お客様の個人情報の取り扱いについて詳しく説明しています。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/privacy",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  },
+  "law": {
+    "title": "laterier Queue-特定商取引法に関する表記",
+    "description": "laterier Queue （アトリエ・クー）の特定商取引法に関する表記ページです。販売業者、返品・交換条件、送料などの情報を記載しています。",
+    "type": "website",
+    "ogUrl": "https://laterierQueue-website.netlify.app/law",
+    "ogImage": "https://laterierQueue-website.netlify.app/images/ogp.png"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= metaData.faq.description %>">
+    <!-- OGP -->
+    <meta property="og:title" content="<%= metaData.faq.title %>">
+    <meta property="og:description" content="<%= metaData.faq.description %>">
+    <meta property="og:type" content="<%= metaData.faq.type %>">
+    <meta property="og:url" content="<%= metaData.faq.ogUrl %>">
+    <meta property="og:image" content="<%= metaData.faq.ogImage %>">
+     <!-- Google-fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+     <!-- css -->
+    <link rel="stylesheet" href="/src/scss/style.scss">
+    <title><%= metaData.faq.title %></title>
+  </head>
+  <body>
+    <%- include('./components/layout/_header-under.ejs') %>
+    <% var page = 'faq'; %>
+
+    <%- include('./components/parts/_breadcrumbs.ejs', { breadcrumbs: breadcrumbs, page: page }) %>
+    <%- include('./components/sections/_faq.ejs', { accordions:accordions }) %>
+    <%- include('./components/layout/_footer.ejs') %>
+    <%- include('./components/parts/_side-btn.ejs') %>
+ <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

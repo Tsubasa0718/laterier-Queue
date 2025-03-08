@@ -1,0 +1,59 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-category{
+    padding: px-clamp(40,50,375,1600) 0;
+    &__title{
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            width: 95%; // 親要素の幅いっぱいの線を引く
+            height: 2px; // 線の太さ
+            background-color: #c4a95e; // アンダーラインの色
+            position: absolute;
+            bottom: 0; // 一番下に配置
+            left: px-clamp(21,30,375,1600);
+            @include responsive("tablet"){
+                width: 98%;
+              }
+        }
+     }
+    &__body{
+        margin-top: px-clamp(20,30,375,1600);
+    }
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: px-to-rem(20px);
+      align-items: stretch;
+      @include responsive("phone"){
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include responsive("desktop"){
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: stretch; // 高さを揃える
+    }
+
+    &__image {
+        width: px-to-rem(120px);
+        img {
+            width: 100%;
+            height: 100%; // 親要素の高さに合わせる
+            object-fit: cover; // 画像の比率を保つ
+        }
+    }
+
+    &__name {
+        flex: 1; // テキストの高さを伸ばす
+        padding: px-to-rem(50px);
+        border: 1px solid var(--accent-color);
+        display: flex;
+        align-items: center; // テキストを中央寄せ
+        justify-content: center;
+    }
+
+}

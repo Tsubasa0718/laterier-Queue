@@ -1,0 +1,229 @@
+@use "../../foundation/_mixin.scss" as *;
+
+// ハンバーガーメニューボタン
+.c-menu-btn{
+  position: fixed;
+  top: px-to-rem(150px);
+  right:  px-to-rem(10px);
+  z-index: 2;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: px-to-rem(70px);
+  height: px-to-rem(70px);
+
+  &__line{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: px-to-rem(30px);
+    height: 2px;
+    background-color: var(--base-color);
+    transition: .3s;
+    &:nth-child(1){
+        top: calc(40% - 9px);
+    }
+    &:nth-child(2){
+        top: calc(40% + 9px);
+    }
+  }
+  &__text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: px-to-rem(10px);
+    font-size: px-to-rem(12px);
+    color: var(--base-color);
+  }
+  &:hover{
+   background-color: var(--active-color);
+  }
+  &[aria-expanded = "true"]{
+    .c-menu-btn__line{
+        &:nth-child(1){
+            top: 40%;
+            transform:  translate(-50%,-40%)  rotate(45deg);
+        }
+        &:nth-child(2){
+            opacity: 0;
+        }
+        &:nth-child(3){
+            top: 40%;
+            transform:  translate(-50%,-40%) rotate(-45deg);
+        }
+    }
+  }
+
+ }
+
+//  アニメーション
+
+// 商品一覧ボタン
+.c-btn--list{
+  display: inline-block;
+  padding: px-to-rem(4px) 0;
+  font-size: px-clamp(13,16,375,1600);
+  font-weight: bold;
+  width: px-clamp(85,100,375,1600);
+  background-color: var(--main-color);
+  color: var(--base-color);
+  border-radius: px-to-rem(6px);
+  line-height: px-clamp(20,24,375,1600);
+  text-align: center;
+  transition: .3s;
+  &:hover{
+    background-color: var(--active-color);
+    color: var(--base-color);
+  }
+}
+
+//  商品ページ遷移ボタン
+.c-btn--product{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: px-to-rem(12px) 0;
+  text-align: center;
+  font-size: px-to-rem(14px);
+  font-weight: bold;
+  width: px-clamp(305,312,375,1600);
+  border: 1px solid var(--main-color);
+  border-radius: px-to-rem(6px);
+  background-color: var(--base-color);
+  transition: background-color .3s, color .3s, border .3s;
+  // 矢印
+  .c-btn--product__arrow{
+   display: inline-block;
+   margin-left: px-to-rem(8px); // テキストとの間隔
+   width: px-to-rem(8px);
+   height: px-to-rem(8px);
+   border-right: 2px solid var(--main-color);
+   border-bottom: 2px solid var(--main-color);
+   transform: rotate(-45deg); // くの字にする
+   transition: border-right-color .3s, border-bottom-color .3s;
+   }
+  &:hover{
+    border: 1px solid var(--active-color);
+    background-color: var(--active-color);
+    color: var(--base-color);
+    .c-btn--product__arrow{
+      border-right-color: var(--base-color);
+      border-bottom-color: var(--base-color);
+    }
+  }
+}
+
+// 商品ページナビゲーションボタン
+
+.c-navigation-btns{
+  margin-top: px-clamp(50,60,375,1600);
+  @include responsive("tablet"){
+    border-bottom: 2px solid var(--active-color);
+  }
+  &__wrapper{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   justify-items: center;
+   max-width: px-to-rem(350px);
+   margin: 0 auto;
+   @include responsive("tablet"){
+    grid-template-columns: repeat(6, 1fr);
+    max-width: none; // 最大幅を解除
+    margin: initial; // 中央寄せ解除
+   }
+  }
+}
+
+.c-navigation-btn{
+ display: inline-block;
+ text-align: center;
+ padding:  px-clamp(10,15,375,1600) 0;
+ width: px-clamp(167,170,375,1600);
+ background-color: var(--accent-color);
+ transition: .3s;
+ @include responsive("tablet"){
+ border-top-left-radius: px-to-rem(6px);
+ border-top-right-radius: px-to-rem(6px);
+ }
+ &:hover{
+  background-color: var(--active-color);
+  color: var(--base-color);
+ }
+}
+
+// ブログページ遷移ボタン
+.c-btn--blog{
+ @extend .c-btn--product;
+ .c-btn--blog__arrow{
+  @extend .c-btn--product__arrow;
+ }
+}
+
+// カートボタン
+.c-btn--cart{
+  display: inline-block;
+  text-align: center;
+  padding: px-to-rem(10px) 0;
+  width: px-to-rem(184px);
+  font-size: px-to-rem(14px);
+  font-weight: bold;
+  color: var(--base-color);
+  line-height: px-to-rem(24px);
+  background-color: var(--active-color);
+  border-radius: px-to-rem(6px);
+}
+
+// フォームボタン
+.c-btn--submit{
+  display: inline-block;
+  text-align: center;
+  padding: px-to-rem(20px) 0;
+  width: px-clamp(334,400,375,1600);
+  font-size: px-to-rem(20px);
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--base-color);
+  background-color: var(--active-color);
+  border-radius: px-to-rem(6px);
+  transition: .3s;
+  &:hover{
+    opacity: .7;
+  }
+}
+
+// page-topボタン
+.c-top-btn{
+  cursor: pointer;
+  position: fixed;
+  right: px-clamp(25,30,375,1600);
+  bottom: px-to-rem(200px);
+  z-index: 3;
+  width: px-clamp(45,80,375,1600);
+  height: px-clamp(45,80,375,1600);
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transition: .3s;
+  // アイコン
+  &__icon{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    img{
+     width: px-clamp(22,39,375,1600);
+     height: px-clamp(15,27,375,1600);
+    }
+  }
+  &__text{
+    position: absolute;
+    left: 50%;
+    bottom: px-clamp(10,15,375,1600);
+    transform: translateX(-50%);
+    font-size: px-clamp(7,14,375,1600);
+    color: var(--base-color);
+   }
+  &:hover{
+   background-color: var(--active-color);
+  }
+}

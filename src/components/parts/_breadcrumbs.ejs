@@ -1,0 +1,17 @@
+<div class="l-container">
+    <div class="c-breadcrumbs" role="navigation" aria-label="パンくずリスト">
+        <ul class="c-breadcrumbs__list">
+            <li class="c-breadcrumbs__item"><a class="c-breadcrumbs__link" href="index.html">ホーム</a></li>
+            <% breadcrumbs[page].forEach((crumb, index) =>{ %>
+                <li class="c-breadcrumbs__item">
+                    <% if (index === breadcrumbs[page].length - 1) { %>
+                        <span class="c-breadcrumbs__page" aria-current="page"><%= crumb.name %></span>
+                    <% } else { %>
+                        <a class="c-breadcrumbs__link" href="<%= crumb.url %>"><%= crumb.name %></a>
+                    <% } %>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.c-breadcrumbs {
+  margin-top: px-to-rem(10px);
+
+  &__list {
+    display: flex;
+    align-items: center;
+   }
+
+  &__item {
+    display: flex; // 矢印とテキストを横並びにする
+    align-items: center; // 矢印とテキストを中央揃えにする
+    // 最初の項目以外に「くの字」の矢印を表示する設定
+
+  }
+
+  &__link {
+    font-size: px-to-rem(12px);
+    white-space: nowrap; // テキストの折り返しを防止する
+    transition: .3s;
+
+     &::after{
+        content: "<";
+        margin-left: px-to-rem(5px);
+
+     }
+    &:hover {
+      border-bottom: 1px solid var(--main-color);
+    }
+  }
+  &__page{
+    font-size: px-to-rem(12px);
+    margin-left: px-to-rem(5px);
+  }
+}

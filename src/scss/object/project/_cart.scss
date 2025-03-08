@@ -1,0 +1,237 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-cart-detail{
+    padding: px-clamp(68,74,375,1600) 0 px-to-rem(100px) 0;
+// 商品コンテンツ
+&__content{
+    @include responsive("tablet"){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        column-gap: px-to-rem(20px);
+    }
+}
+// 商品画像
+&__box,
+&__image-block{
+@include responsive("tablet"){
+  width: 50%;
+}
+
+}
+// 商品名
+&__name-title{
+  font-size: px-clamp(22,30,375,1600);
+  font-weight: bold;
+  line-height: 1.5;
+  border-bottom: 1px dashed var(--main-color);
+}
+&__name-product-cord{
+ line-height: 1.75;
+}
+&__name-price-wrapper{
+    margin-top: px-to-rem(20px);
+}
+&__name-price{
+ font-size: px-to-rem(20px);
+ font-weight: bold;
+ line-height: 1.75;
+}
+&__name-number{
+    font-size: px-to-rem(28px);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+&__name-tax{
+    font-size: px-to-rem(16px);
+}
+&__name-product-option{
+    margin-top: px-to-rem(26px);
+    display: flex;
+    align-items: center;
+}
+&__name-product-option-image{
+    display: flex;
+    align-items: center;
+}
+&__name-product-option-text{
+  white-space: nowrap;
+}
+&__name-product-option-wrapper{
+   margin-left: px-to-rem(20px);
+   @include responsive("tablet"){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+}
+
+
+
+&__name-btn{
+    margin-top: px-to-rem(10px);
+    @include responsive("tablet"){
+        margin-top: 0;
+        margin-left: px-clamp(115,230,992,1600);
+    }
+}
+// 商品画像
+&__image-block{
+    margin-top: px-to-rem(30px);
+    @include responsive("tablet"){
+        margin-top: 0;
+    }
+}
+&__thumb-wrapper{
+ margin-top: px-to-rem(10px);
+}
+&__thumb-btn.active{
+  img{
+    border: 5px solid var(--active-color);
+  }
+}
+// 商品説明
+&__desc{
+  border: 1px solid var(--active-color);
+  padding: px-to-rem(15px);
+}
+&__desc-body{
+  margin-top: px-to-rem(30px);
+  @include responsive("tablet"){
+    margin-top: px-to-rem(15px);
+  }
+}
+&__desc-head{
+    font-weight: bold;
+    line-height: 1.75;
+}
+&__desc-text-body{
+    margin-top: px-to-rem(5px);
+    display: grid;
+    row-gap: px-to-rem(40px);
+}
+&__desc-text{
+    line-height: 1.75;
+}
+
+&__desc-item{
+    line-height: 1.75;
+}
+//　商品の特徴
+&__feature-body{
+ padding: px-clamp(50,100,375,1600) 0;
+ @include responsive("tablet"){
+    display: flex;
+    justify-content: center;
+ }
+}
+&__feature-image-wrapper {
+    display: flex;
+    align-items: center;
+    gap: px-to-rem(5px); // 画像の間に余白をつける
+    @include responsive("tablet"){
+      justify-content: center;
+     }
+  }
+
+&__feature-image:not(:first-child){
+ margin-left: px-to-rem(5px);
+}
+&__feature-text-body{
+    margin-top: px-to-rem(25px);
+}
+&__feature-text{
+    line-height: 1.75;
+}
+
+// カート内容
+&__summary{
+  display: grid;
+  row-gap: px-to-rem(40px);
+  margin-bottom: px-clamp(80,100,375,1600);
+}
+
+&__summary-image{
+   width: 30%;
+  @include responsive("tablet"){
+    width: 20%;
+  }
+}
+&__summary-desc--card01{
+   width: 70%;
+   @include responsive("tablet"){
+    width: 80%;
+  }
+}
+&__summary-card01,
+&__summary-card02{
+ border: 1px solid var(--active-color);
+ padding: px-clamp(15,25,375,1600);
+}
+&__summary-wrapper{
+  display: flex;
+  gap: px-clamp(20,30,375,1600);
+}
+&__summary-title{
+    font-size: px-clamp(16,30,375,1600);
+    font-weight: bold;
+    line-height: 1.5;
+    border-bottom: 1px dashed var(--main-color);
+}
+&__summary-product-cord{
+    display: block;
+    margin-top: px-to-rem(10px);
+    line-height: 1.75;
+}
+&__summary-price{
+    font-size: px-to-rem(20px);
+    font-weight: bold;
+    line-height: 1.75;
+    margin-bottom: px-to-rem(10px);
+   }
+   &__summary-price-number{
+       font-size: px-to-rem(28px);
+       font-weight: bold;
+       color: var(--primary-color);
+   }
+   &__summary-price-tax{
+       font-size: px-to-rem(16px);
+   }
+   &__summary-option-wrapper{
+    @include responsive("tablet"){
+        display: flex;
+}
+    @include responsive("desktop"){
+        justify-content: space-between;
+    }
+   }
+   &__summary-image{
+    flex-shrink: 1;
+    margin-right: px-to-rem(20px);
+   }
+   &__summary-option--second{
+    margin-top: px-to-rem(20px);
+    @include responsive("tablet"){
+        margin-top: 0;
+    }
+   }
+   &__summary-option{
+     display: flex;
+     align-items: center;
+
+   }
+   &__summary-option-caption{
+    margin-bottom: px-to-rem(3px);
+   }
+   &__summary-option-inner{
+     @include responsive("desktop"){
+        display: flex;
+        align-items: center;
+     }
+    }
+    &__summary-btn{
+        @include responsive("desktop"){
+           margin-left: px-to-rem(80px);
+         }
+    }
+}

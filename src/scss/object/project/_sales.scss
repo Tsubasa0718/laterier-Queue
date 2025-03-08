@@ -1,0 +1,86 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-sales{
+    margin: px-clamp(40,50,375,1600) 0;
+    padding:  px-clamp(70,100,375,1600) 0;
+    background-color: var(--accent-color);
+ &__title{
+  margin-bottom: px-clamp(20,30,375,1600);
+  font-size: px-clamp(24,30,375,1600);
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+ }
+ &__text-body{
+  max-width: px-to-rem(1084px);
+  margin: 0 auto;
+  padding: 0 px-to-rem(20px);
+  text-align: center;
+  line-height: px-to-rem(28px);
+ }
+ &__body{
+    margin-top: px-clamp(45,70,375,1600);
+ }
+ &__wrapper{
+   display: grid;
+   row-gap: px-clamp(30,40,375,1600);
+ }
+ &__card{
+   @include responsive("tablet"){
+     display: flex;
+     justify-content: space-between;
+
+   }
+ }
+ &__image{
+   width: 100%;
+   @include responsive("tablet"){
+      width: 50%;
+    }
+
+   img{
+      width: 100%;
+
+   }
+ }
+&__content{
+   @include responsive("tablet"){
+      margin-left: px-to-rem(20px);
+      width: 50%;
+    }
+ }
+ &__shop-name{
+   margin-top: px-to-rem(20px);
+   padding-left: px-clamp(10,24,375,1600);
+   font-size: px-clamp(16,20,375,1600);
+   font-weight: bold;
+   line-height: px-to-rem(28px);
+   color: var(--base-color);
+   background-color: var(--main-color);
+   @include responsive("tablet"){
+      margin: 0;
+   }
+ }
+ &__info-wrapper{
+   display: grid;
+   row-gap: px-to-rem(15px);
+   margin-top: px-clamp(20,25,375,1600);
+ }
+ &__info{
+  display: flex;
+
+ }
+ &__label {
+   font-weight: bold;
+   white-space: nowrap;
+   width: 20%;
+ }
+ &__info-text{
+   width: 80%;
+ }
+ &__label,
+ &__info-text{
+   font-size: px-clamp(14,16,375,1600);
+ }
+
+}

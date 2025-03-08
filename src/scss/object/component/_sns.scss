@@ -1,0 +1,12 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.c-sns{
+    margin-top: px-to-rem(30px);
+    &__wrapper{
+     display: flex;
+     justify-content: center;
+    }
+    &__image:nth-child(1){
+        margin-right: px-to-rem(40px);
+    }
+}

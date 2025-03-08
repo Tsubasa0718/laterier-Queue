@@ -1,0 +1,67 @@
+@use "../foundation/_mixin.scss" as *;
+
+// トップページ
+.l-header-top{
+ margin-top: px-clamp(0,10,375,1600);
+ &__inner{
+    max-width: px-to-rem(1084px);
+    margin: 0 auto;
+    padding: 0 px-to-rem(20px);
+    @include responsive("phone"){
+      align-items: center;
+    }
+    @include responsive("tablet"){
+      display: flex;
+      justify-content: center;
+
+    }
+ }
+ &__Bg{
+   background-image: url(../images/header__visualBg.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: px-to-rem(200px);
+ }
+ &__logo{
+   transform: .3s;
+   @include responsive("tablet"){
+    width: 50%;
+   }
+   &:hover{
+      opacity: .7;
+   }
+ }
+ &__text{
+   font-size: px-clamp(16,20,375,1600);
+    padding: px-clamp(25,40,375,1600) 0;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    line-height: 1.8;
+    @include responsive("tablet"){
+      width: 50%;
+    }
+ }
+}
+
+// 下層ページ
+.l-header-under{
+  background-image: url(../images/under-header-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner{
+    padding: px-clamp(20,30,375,1600) 0;
+    @include responsive("tablet"){
+      padding-left: px-to-rem(30px);
+    }
+  }
+  &__logo-link{
+    display: flex;
+    justify-content: center;
+    @include responsive("tablet"){
+      justify-content: flex-start;
+    }
+  }
+}

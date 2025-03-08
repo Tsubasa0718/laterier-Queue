@@ -1,0 +1,56 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: px-to-rem(5px); // prev と next ボタンの間隔を調整
+
+  &__numbers {
+    display: flex;
+    gap: px-to-rem(5px);
+  }
+}
+
+.c-page-btn {
+  display: inline-block;
+  text-align: center;
+  padding: px-clamp(10, 15, 375, 1600) 0;
+  background-color: var(--accent-color);
+  font-size: px-clamp(14, 18, 375, 1600);
+  font-weight: bold;
+  width: px-clamp(60, 100, 375, 1600);
+  border-radius: px-to-rem(6px);
+  cursor: pointer; // ボタンらしさを付与
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+
+  &:hover:not([disabled]) {
+    background-color: var(--active-color);
+  }
+
+  &:focus-visible {
+    outline: px-to-rem(3px) solid var(--active-color);
+    outline-offset: px-to-rem(2px);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; // カーソルを「禁止」に
+  }
+
+  &.is-active {
+    background-color: var(--active-color);
+    color: var(--base-color);
+    cursor: default;
+    pointer-events: none; // アクティブなページはクリックできない
+  }
+}
+
+.c-ellipsis {
+  display: inline-block;
+  padding: px-clamp(10, 15, 375, 1600);
+  text-align: center;
+  width: px-clamp(60, 100, 375, 1600);
+  color: var(--text-color);
+  opacity: 0.6;
+}

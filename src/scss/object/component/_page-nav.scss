@@ -1,0 +1,30 @@
+@use"../../foundation/_mixin.scss" as *;
+.c-page-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   @include responsive("tablet"){
+    &__top{
+      font-size: px-to-rem(18px);
+      line-height: px-to-rem(20px);
+      &:hover{
+        text-decoration: underline 1px solid var(--main-color);
+      }
+    }
+    &__prev,
+    &__next{
+        display: inline-block;
+        text-align: center;
+        padding: px-to-rem(15px) 0;
+        width: px-to-rem(144px);
+        border-radius: px-to-rem(6px);
+        background-color: var(--accent-color);
+        &:hover{
+            background-color: var(--active-color);
+            color: var(--base-color);
+        }
+    }
+
+
+   }
+}

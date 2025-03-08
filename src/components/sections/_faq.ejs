@@ -1,0 +1,42 @@
+<section class="p-faq">
+
+  <div class="l-container">
+        <h2 class="c-section-title--center p-faq__title">よくある質問</h2>
+        <span class="c-section-subtitle--center">FAQ</span>
+        <div class="p-faq__intro">
+            お客様から寄せられたよくあるご質問をあつめました。<br>
+            ご一読いただいても問題が解決しない場合はお問合せフォームからご連絡下さい。
+        </div>
+        <!-- アコーディオンメニュー -->
+        <!-- アコーディオンメニュー -->
+<div class="p-accordion">
+  <% accordions.forEach((accordion, index) => { %>
+  <div class="p-accordion__item">
+      <button
+          type="button"
+          class="p-accordion__btn"
+          id="accordion-btn-<%= index %>"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="accordion-content-<%= index %>">
+          <%= accordion.question %>
+          <span class="p-accordion__question">Q</span>
+          <span class="p-accordion__plus"></span>
+      </button>
+      <div
+          id="accordion-content-<%= index %>"
+          class="p-accordion__content"
+          role="region"
+          aria-hidden="true"
+          aria-labelledby="accordion-btn-<%= index %>"
+          aria-live="polite">
+          <p><%= accordion.answer %></p>
+          <span class="p-accordion__answer">A</span>
+      </div>
+  </div>
+  <% }) %>
+</div>
+
+
+   </div>
+</section>

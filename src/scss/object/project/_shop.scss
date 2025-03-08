@@ -1,0 +1,122 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.p-shop{
+    padding: px-clamp(55,75,375,1600) 0 px-clamp(100,150,375,1600) 0;
+    &__title{
+        position: relative;
+      &::before{
+          display: block;
+          content: "";
+          position: absolute;
+          top: px-to-rem(-45px);
+          left: 50%;
+          transform: translateX(-50%);
+          background-image: url(../images/ico_paw--shop.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: px-to-rem(117px);
+          height: px-to-rem(32px);
+      }
+    }
+    &__intro{
+        margin-top: px-to-rem(40px);
+    }
+    &__staff-body{
+     margin-top: px-clamp(35,75,375,1600);
+
+    }
+    &__staff-list{
+     display: grid;
+     row-gap: px-clamp(50,100,375,1600);
+    }
+    &__staff-item{
+     @include responsive("tablet"){
+      display: flex;
+     }
+    }
+    &__staff-item--reverse{
+      @include responsive("tablet"){
+       flex-direction: row-reverse;
+       }
+    }
+    &__staff-image{
+      @include responsive("tablet"){
+        width: 50%;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__staff-image-01{
+     @include responsive("tablet"){
+      margin-left: px-to-rem(15px);
+     }
+    }
+    &__staff-image-02{
+     @include responsive("tablet"){
+      margin-right: px-to-rem(15px);
+     }
+    }
+
+    &__staff-text-body{
+      padding: px-clamp(25,150,375,1600) px-clamp(25,70,375,1600);
+      background-color: var(--accent-color);
+      width: 90%;
+      @include responsive("tablet"){
+        position: relative;
+        z-index: -1;
+        width: 50%;
+        top: px-to-rem(50px);
+       }
+    }
+
+    &__staff-text-body--left{
+      margin-left: auto; /* 左側に自動マージンを設定して右寄せ */
+      margin-right: 0;   /* 念のため右マージンを0にリセット */
+      @include responsive("tablet"){
+        margin-right: px-clamp(130,260,992,1600);
+        &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: px-to-rem(-340px);
+          width: px-to-rem(340px);
+          height: 100%;
+          z-index: -1;
+          background-color: var(--accent-color);
+        }
+       }
+    }
+    &__staff-text-body--right{
+      @include responsive("tablet"){
+        margin-left: px-clamp(130,260,992,1600);
+        &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          right: px-to-rem(-340px);
+          width: px-to-rem(340px);
+          height: 100%;
+          z-index: -1;
+          background-color: var(--accent-color);
+        }
+      }
+    }
+
+    &__staff-title{
+      font-size: px-clamp(22,30,375,1600);
+      font-weight: bold;
+      line-height: 1.5;
+      border-bottom: 1px dashed var(--main-color);
+    }
+    &__staff-text{
+      display: block;
+      margin-top:  px-clamp(15,35,375,1600);
+      line-height: 2;
+
+    }
+}

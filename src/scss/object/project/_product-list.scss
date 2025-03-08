@@ -1,0 +1,22 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.p-product-list{
+    padding: px-clamp(40,50,375,1600) 0;
+    &__title{
+      position: relative;
+      &::before{
+          display: block;
+          content: "";
+          position: absolute;
+          top: px-to-rem(-30px);
+          left: 50%;
+          transform: translateX(-50%);
+          background-image: url(../images/ico_paw--product.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: px-to-rem(45px);
+          height: px-to-rem(32px);
+      }
+    }
+}

@@ -1,0 +1,7 @@
+@use "../foundation/_mixin.scss" as *;
+
+.l-sp-only{
+  @include responsive("tablet"){
+    display: none;
+  }
+}

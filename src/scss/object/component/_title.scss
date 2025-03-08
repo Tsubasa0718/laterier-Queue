@@ -1,0 +1,38 @@
+@use"../../foundation/_mixin.scss" as *;
+.c-section-title--left {
+    position: relative;
+    display: flex;
+    align-items: center; // 縦方向の中央揃え
+    font-size: px-clamp(24, 30, 375, 1600);
+    font-weight: bold;
+    line-height: px-to-rem(44px);
+
+    &::before {
+      content: "";
+      display: inline-block; // サイズを適用
+      background-image: url(../images/text-icon.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: px-clamp(21, 30, 375, 1600);
+      height: px-clamp(46, 67, 375, 1600);
+      margin-right: 8px; // テキストとの間隔
+    }
+  }
+
+.c-section-title--center{
+ font-size: px-clamp(30,40,375,1600);
+ font-weight: bold;
+ line-height: px-to-rem(45px);
+ letter-spacing: .02em;
+ color: var(--main-color);
+ text-align: center;
+}
+.c-section-subtitle--center{
+ display: block;
+ margin-top: px-to-rem(10px);
+ font-size: px-clamp(15,20,375,1600);
+ font-weight: bold;
+ color: var(--active-color);
+ letter-spacing: .02em;
+ text-align: center;
+}

@@ -1,0 +1,74 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.p-privacy{
+    padding: px-clamp(60,75,375,1600) 0 px-clamp(80,100,375,1600) 0;
+    &__title{
+        position: relative;
+        &::before{
+            display: block;
+            content: "";
+            position: absolute;
+            top: px-to-rem(-47px);
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../images/ico_paw--Privacy.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: px-clamp(121,353,375,1600);
+            height: px-to-rem(42px);
+        }
+    }
+    &__intro{
+     line-height: 1.75;
+     margin-top: px-to-rem(40px);
+    }
+
+    &__section-body{
+      margin-top: px-to-rem(90px);
+      display: grid;
+      row-gap: px-clamp(45,90,375,1600);
+    }
+
+    &__section-title{
+      font-size: px-clamp(20,30,375,1600);
+      font-weight: bold;
+      line-height: 1.5;
+      border-bottom: 2px solid var(--active-color);
+    }
+    &__text{
+        margin-top: px-to-rem(35px);
+        line-height: 1.75;
+    }
+    &__list{
+        margin-top: px-to-rem(20px);
+        display: grid;
+        row-gap: px-to-rem(18px);
+    }
+    &__item:nth-child(1){
+        &::before{
+            margin-right: px-to-rem(5px);
+            content: "1.";
+        }
+    }
+    &__item:nth-child(2){
+        &::before{
+            margin-right: px-to-rem(5px);
+            content: "2.";
+        }
+    }
+    &__item:nth-child(3){
+        &::before{
+            margin-right: px-to-rem(5px);
+            content: "3.";
+        }
+    }
+    &__address{
+        margin-top: px-to-rem(20px);
+        line-height: 1.75;
+    }
+    &__conclusion{
+        margin-top: px-clamp(30,50,375,1600);
+        text-align: right;
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="laterier Queue （アトリエ・クー）へのお問い合わせはこちらからどうぞ。ご質問やご意見がございましたら、お気軽にご連絡ください。">
+    <!-- OGP -->
+    <meta property="og:title" content="laterier Queue-ねこ店舗紹介ページ">
+    <meta property="og:description" content="laterier Queue （アトリエ・クー）へのお問い合わせはこちらからどうぞ。ご質問やご意見がございましたら、お気軽にご連絡ください。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://laterierQueue-website.netlify.app/">
+    <meta property="og:image" content="https://laterierQueue-website.netlify.app/images/ogp.png">
+     <!-- Google-fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="/src/scss/style.scss">
+    <title>laterier Queue-ねこ店舗紹介ページ</title>
+    <script type="module" crossorigin src="/assets/main-CHVP8ac3.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main.css">
+  </head>
+  <body>
+    <header class="l-header-under">
+  <div class="l-header-under__inner">
+    <h1 class="l-header-under__logo">
+      <a class="l-header-under__logo-link" href="#">
+        <img width="400" height="140" src="../images/logo-under-page.png" alt="ハンドメイドねこグッズのお店laterierQueue">
+      </a>
+    </h1>
+  </div>
+
+    <nav id="is-nav" class="l-nav" aria-hidden="true">
+      <div class="l-nav__inner">
+        <div class="l-nav__logo l-sp-only">
+          <figure class="l-nav__image">
+            <img width="76" height="103" src="../images/logo_nav.png" alt="ナビゲーションのロゴ">
+          </figure>
+        </div>
+          <ul class="l-nav__list">
+              
+                 <li class="l-nav__item"><a class="l-nav__link" href="index.html">トップページ</a></li>
+             
+                 <li class="l-nav__item"><a class="l-nav__link" href="product.html">商品一覧</a></li>
+             
+                 <li class="l-nav__item"><a class="l-nav__link" href="blog.html">ねこブログ</a></li>
+             
+                 <li class="l-nav__item"><a class="l-nav__link" href="shop.html">ねこ店員紹介</a></li>
+             
+                 <li class="l-nav__item"><a class="l-nav__link" href="faq.html">よくある質問</a></li>
+             
+                 <li class="l-nav__item"><a class="l-nav__link" href="contact.html">お問い合わせ</a></li>
+             
+            </ul>
+            <ul class="l-nav__legal-links l-sp-only">
+             <li class="l-nav__legal-item"><a class="l-nav__legal-link" href="tokushoho.html">特定商取引法に関する表記</a></li>
+             <li class="l-nav__legal-item"><a class="l-nav__legal-link" href="privacy.html">プライバシーポリシー</a></li>
+           </ul>
+      </div>
+      </nav>
+
+  <button  type="button" id="menu-btn" class="c-menu-btn l-sp-only" aria-controls="is-nav" aria-expanded="false">
+    <span class="c-menu-btn__line"></span>
+    <span class="c-menu-btn__line"></span>
+    <span class="c-menu-btn__line"></span>
+    <span class="c-menu-btn__text">MENU</span>
+</button>
+</header>
+    
+    <div class="l-container">
+    <div class="c-breadcrumbs" role="navigation" aria-label="パンくずリスト">
+        <ul class="c-breadcrumbs__list">
+            <li class="c-breadcrumbs__item"><a class="c-breadcrumbs__link" href="index.html">ホーム</a></li>
+            
+                <li class="c-breadcrumbs__item">
+                    
+                        <span class="c-breadcrumbs__page" aria-current="page">お問い合わせ</span>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+</div>
+    <section class="p-contact">
+    <div class="l-container">
+    <h2 class="c-section-title--center p-contact__title">お問い合わせ</h2>
+    <span class="c-section-subtitle--center">CONTACT</span>
+    <div class="p-contact__intro">
+        <p>
+            当店へのご質問・お問い合わせ等は以下のフォームからご連絡下さい。
+        </p>
+    </div>
+        <div class="p-form-body">
+    <!-- フォームの開始 -->
+    <form id="js-form" class="p-form" action="#" noValidate>
+        <!-- select ボックス -->
+        <div class="p-form__item">
+            <label for="select" class="p-form__title">お問い合わせ情報<span class="p-form__required">必須</span></label>
+            <div class="p-form__select-block">
+                <div class="p-form__select-wrapper">
+                    <!-- 選択メニュー -->
+                    <select class="p-form__select" name="select" id="select" required aria-describedby="select-error">
+                        <option value="">選択してください</option>
+                        <option value="商品について">商品について</option>
+                        <option value="購入について">購入について</option>
+                        <option value="在庫・入荷について">在庫・入荷について</option>
+                        <option value="その他お問い合わせについて">その他お問い合わせについて</option>
+                    </select>
+                    <!-- エラーメッセージ表示用 -->
+                    <span id="select-error" aria-live="polite"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- テキストエリア -->
+        <div class="p-form__item">
+            <label for="comment" class="p-form__title">お問い合わせ内容<span class="p-form__required">必須</span></label>
+            <div class="p-form__input-body">
+                <textarea class="p-form__textarea" name="comment" id="comment" placeholder="お問い合わせ内容をご記入ください" required aria-describedby="comment-error"></textarea>
+                <!-- エラーメッセージ表示用 -->
+                <span id="comment-error" aria-live="polite"></span>
+            </div>
+        </div>
+
+        <!-- テキスト入力フィールド: 名前 -->
+        <div class="p-form__item">
+            <label for="name" class="p-form__title">お名前<span class="p-form__required">必須</span></label>
+            <div class="p-form__input-body">
+                <input type="text" name="name" id="name" placeholder="猫野三毛蔵" required aria-describedby="name-error">
+                <!-- エラーメッセージ表示用 -->
+                <span id="name-error" aria-live="polite"></span>
+            </div>
+        </div>
+
+        <!-- テキスト入力フィールド: メールアドレス -->
+        <div class="p-form__item">
+            <label for="email" class="p-form__title">返信用メールアドレス<span class="p-form__required">必須</span></label>
+            <div class="p-form__input-body">
+                <input type="email" name="email" id="email" placeholder="mikezou@sample.jp" required aria-describedby="email-error">
+                <!-- エラーメッセージ表示用 -->
+                <span id="email-error" aria-live="polite"></span>
+            </div>
+        </div>
+
+        <!-- 送信ボタン -->
+        <div class="p-form__btn">
+            <button type="submit" class="c-btn--submit">入力内容を確認する</button>
+        </div>
+    </form>
+    <!-- フォームの終了 -->
+</div>
+
+    </div>
+</section>
+    <footer class="l-footer">
+<div class="l-container">
+  <div class="l-footer__inner">
+    <div class="l-footer__logo">
+        <a href="#">
+            <img width="76" height="104" src="../images/logo_footer.png" alt="ハンドメイドねこグッズのお店laterierQueueのフッターのロゴ">
+        </a>
+    </div>
+    <div class="l-footer__nav" role="navigation">
+       <ul class="l-footer__nav-list">
+        
+            <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="index.html">トップページ</a></li>
+        
+            <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="product.html">商品一覧</a></li>
+        
+            <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="blog.html">ねこブログ</a></li>
+        
+            <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="shop.html">ねこ店員紹介</a></li>
+        
+            <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="faq.html">よくある質問</a></li>
+        
+            <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="contact.html">お問い合わせ</a></li>
+        
+       </ul>
+       <ul class="l-footer__nav-legal-links">
+
+         <li class="l-footer__nav-legal-item"><a class="l-footer__nav-legal-link" href="privacy.html">プライバシーポリシー</a></li>
+         <li class="l-footer__nav-legal-item"><a class="l-footer__nav-legal-link" href="tokushoho.html">特定商取引法に関する表記</a></li>
+       </ul>
+    </div>
+
+    <div class="l-footer__copy">
+      <small>© l’atelier Queue All Rights Reserved. 2025</small>
+    </div>
+  </div>
+</div>
+</footer>
+        <a href="#" class="c-top-btn" aria-label="ページのトップへ戻る">
+        <span class="c-top-btn__icon">
+            <img width="39" height="27" src="../images/top-btn-icon.png" alt="">
+        </span>
+        <span class="c-top-btn__text">PAGETOP</span>
+    </a>
+  </body>
+</html>

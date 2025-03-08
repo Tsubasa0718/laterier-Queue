@@ -1,0 +1,24 @@
+{
+    "index": [],
+    "product": [
+      { "name": "商品一覧", "url": "product.html" }
+    ],
+    "blog": [
+      { "name": "ねこブログ", "url": "blog.html" }
+    ],
+    "shop": [
+      { "name": "ねこ店員紹介", "url": "shop.html" }
+    ],
+    "faq": [
+      { "name": "よくある質問", "url": "faq.html" }
+    ],
+    "contact": [
+      { "name": "お問い合わせ", "url": "contact.html" }
+    ],
+    "privacy": [
+      { "name": "プライバシーポリシー", "url": "privacy.html" }
+    ],
+    "tokushoho": [
+      { "name": " 特定商取引法に関する表記", "url": "tokushoho.html" }
+    ]
+  }

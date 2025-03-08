@@ -1,0 +1,80 @@
+@use "../foundation/_mixin.scss" as *;
+
+.l-footer{
+    background-color: var(--main-color);
+    color: var(--base-color);
+  &__inner{
+   padding: px-to-rem(50px) 0 px-to-rem(45px) 0;
+ }
+ &__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: px-to-rem(35px);
+    a {
+        img{
+            margin: 0 auto;
+        }
+    }
+   @include responsive("tablet"){
+     margin-bottom: px-to-rem(15px);
+   }
+ }
+
+ &__nav-list{
+    display: flex;
+    flex-direction: column;
+ @include responsive("tablet"){
+   flex-direction: row;
+   justify-content: center;
+ }
+}
+&__nav-item{
+    padding: px-to-rem(15px) 0;
+    border-top: 1px dashed var(--base-color);
+    border-bottom: 1px dashed var(--base-color);
+    @include responsive("tablet"){
+        padding: 0 px-to-rem(15px);
+        border-top: none;
+        border-bottom: none;
+        border-right: 1px solid var(--base-color);
+      }
+}
+&__nav-item:not(:first-of-type){
+    @include responsive("tablet"){
+       border-bottom: none;
+      }
+}
+&__nav-link{
+    display: block;
+    text-align: center;
+    font-size: px-to-rem(14px);
+    @include responsive("tablet"){
+       padding: 0 px-to-rem(10px);
+       font-size: px-to-rem(12px);
+     }
+
+}
+
+&__nav-legal-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: px-to-rem(35px);
+  @include responsive("tablet"){
+      margin-top: px-to-rem(10px);
+  }
+}
+&__nav-legal-item:first-of-type{
+    border-right: 1px solid var(--base-color);
+}
+&__nav-legal-link{
+    padding: 0 px-to-rem(10px);
+    font-size: px-to-rem(12px);
+    line-height: px-to-rem(23px);
+}
+&__copy{
+    margin-top: px-to-rem(50px);
+    text-align: center;
+}
+}

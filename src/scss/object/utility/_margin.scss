@@ -1,0 +1,6 @@
+@use "../../foundation/_mixin.scss" as *;
+
+// ページネーション上部余白
+.u-pagination-mt{
+    margin-top: px-clamp(50,80,375,1600);
+}

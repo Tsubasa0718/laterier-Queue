@@ -1,0 +1,35 @@
+<header class="l-header-under">
+  <div class="l-header-under__inner">
+    <h1 class="l-header-under__logo">
+      <a class="l-header-under__logo-link" href="#">
+        <img width="400" height="140" src="../images/logo-under-page.png" alt="ハンドメイドねこグッズのお店laterierQueue">
+      </a>
+    </h1>
+  </div>
+
+    <nav id="is-nav" class="l-nav" aria-hidden="true">
+      <div class="l-nav__inner">
+        <div class="l-nav__logo l-sp-only">
+          <figure class="l-nav__image">
+            <img width="76" height="103" src="../images/logo_nav.png" alt="ナビゲーションのロゴ">
+          </figure>
+        </div>
+          <ul class="l-nav__list">
+              <% navItems.forEach((item)=>{ %>
+                 <li class="l-nav__item"><a class="l-nav__link" href="<%= item.link %>"><%= item.name %></a></li>
+             <% }) %>
+            </ul>
+            <ul class="l-nav__legal-links l-sp-only">
+             <li class="l-nav__legal-item"><a class="l-nav__legal-link" href="tokushoho.html">特定商取引法に関する表記</a></li>
+             <li class="l-nav__legal-item"><a class="l-nav__legal-link" href="privacy.html">プライバシーポリシー</a></li>
+           </ul>
+      </div>
+      </nav>
+
+  <button  type="button" id="menu-btn" class="c-menu-btn l-sp-only" aria-controls="is-nav" aria-expanded="false">
+    <span class="c-menu-btn__line"></span>
+    <span class="c-menu-btn__line"></span>
+    <span class="c-menu-btn__line"></span>
+    <span class="c-menu-btn__text">MENU</span>
+</button>
+</header>
