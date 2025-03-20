@@ -16,6 +16,7 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     sourcemap: true,
+    emptyOutDir: false, // ✅ 変更
     rollupOptions: {
       input: getPages(),
       output: {
