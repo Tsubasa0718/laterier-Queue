@@ -1,0 +1,8 @@
+[build]
+  functions = "netlify/functions"  # Netlify Functions のフォルダを指定
+
+[[redirects]]
+  from = "/admin/*"  # 管理ページだけ認証をかける例
+  to = "/.netlify/functions/auth"
+  status = 200
+  force = true
