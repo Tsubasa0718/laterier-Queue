@@ -1,2 +1,3 @@
 /*
-Authorization: Basic dXNlclg3UTk6UEBzc3cwcmQhQTla
+  WWW-Authenticate: Basic realm="Restricted Area"
+  Authorization: Basic dXNlclg3UTk6UEBzc3cwcmQhQTla
